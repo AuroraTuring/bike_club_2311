@@ -5,53 +5,6 @@
 5. A Biker can report its personal record for a specific ride. This is the lowest time recorded for a ride. This method will return false if the Biker hasn't completed the ride
 
 ```ruby
-pry(main)> require './lib/ride'
-# => true
-
-pry(main)> require './lib/biker'
-# => true
-
-pry(main)> biker = Biker.new("Kenny", 30)
-# => #<Biker:0x00007fc62ca41150...>
-
-pry(main)> biker.name
-# => "Kenny"
-
-pry(main)> biker.max_distance
-# => 30
-
-pry(main)> biker.rides
-# => {}
-
-pry(main)> biker.acceptable_terrain
-# => []
-
-pry(main)> biker.learn_terrain!(:gravel)
-
-pry(main)> biker.learn_terrain!(:hills)
-
-pry(main)> biker.acceptable_terrain
-# => [:gravel, :hills]
-
-pry(main)> ride1 = Ride.new({name: "Walnut Creek Trail", distance: 10.7, loop: false, terrain: :hills})
-# => #<Ride:0x00007fc62ca32a10...>
-
-pry(main)> ride2 = Ride.new({name: "Town Lake", distance: 14.9, loop: true, terrain: :gravel})
-# => #<Ride:0x00007fc62cb42ba8...>
-
-pry(main)> biker.log_ride(ride1, 92.5)
-
-pry(main)> biker.log_ride(ride1, 91.1)
-
-pry(main)> biker.log_ride(ride2, 60.9)
-
-pry(main)> biker.log_ride(ride2, 61.6)
-
-pry(main)> biker.rides
-# => {
-#      #<Ride:0x00007fc62ca32a10...> => [92.5, 91.1],
-#      #<Ride:0x00007fc62cb42ba8...> => [60.9, 61.6]
-#    }
 
 pry(main)> biker.personal_record(ride1)
 => 91.1
