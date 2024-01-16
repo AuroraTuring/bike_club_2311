@@ -14,9 +14,11 @@ class Ride
 
   def total_distance
     # if the ride is not a loop,
-    if loop? == false
+    if !loop?
       # double the base distance.
         distance * 2
+    else
+      distance
     end
   end
 
