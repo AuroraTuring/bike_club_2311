@@ -18,6 +18,7 @@ Graded Items:
 2. Rides can indicate if the ride is a loop or not.
 3. A Ride can report its total distance. The total distance is double the base distance if the ride is not a loop.
 
+
 ```ruby
 pry(main)> require './lib/ride'
 # => true
@@ -49,6 +50,8 @@ pry(main)> ride2.loop?
 pry(main)> ride2.total_distance
 # => 14.9
 ```
+
+
 
 
 ## Iteration 2 - Bikers
