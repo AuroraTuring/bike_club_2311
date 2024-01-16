@@ -12,4 +12,9 @@ class Biker
     @acceptable_terrain << type
   end
 
+  def log_ride(ride, distance)
+    @rides[ride] = [] if @rides[ride].nil?
+    @rides[ride] << distance
+  end
+
 end
